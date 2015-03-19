@@ -17,6 +17,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    /*
+     * Create UINavigationBar
+     */
+    UINavigationBar *navigationBar = [[UINavigationBar alloc]init];
+    [navigationBar setFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 64)];
+    UINavigationItem *navigationItem = [[UINavigationItem alloc]init];
+    navigationItem.title = @"Cloud Music Player";
+    [navigationBar pushNavigationItem:navigationItem animated:FALSE];
+    [self.view addSubview:navigationBar];
+    
 }
 
 - (void)didReceiveMemoryWarning {
